@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Informe: El Repositorio en GitHub</title>
+
+  <style>
+    /* Estilo general */
+    :root{
+      --texto:#222;
+      --accent:#0b66b2;
+      --fondo:#ffffff;
+      --margen:36px;
+      --titulo-size:20px;
+      --sub-size:14px;
+      font-family: "Helvetica Neue", Arial, sans-serif;
+    }
+
+    html,body{
+      background:#f3f4f6;
+      margin:0;
+      padding:0;
+      color:var(--texto);
+    }
+
+    .contenedor{
+      max-width:900px;
+      margin:28px auto;
+      background:var(--fondo);
+      box-shadow:0 2px 18px rgba(0,0,0,0.06);
+      padding:var(--margen);
+      box-sizing: border-box;
+    }
+
+    header{
+      text-align:center;
+      margin-bottom:18px;
+    }
+
+    header h1{
+      margin:0;
+      font-size:calc(var(--titulo-size) + 6px);
+      letter-spacing:0.3px;
+      color:var(--texto);
+    }
+
+    .meta{
+      margin-top:8px;
+      font-size:13px;
+      color:#444;
+    }
+
+    hr.sep{
+      border:0;
+      height:1px;
+      background:#e6e9ee;
+      margin:18px 0;
+    }
+
+    h2{
+      color:var(--accent);
+      margin:18px 0 8px 0;
+      font-size:16px;
+    }
+
+    h3{
+      margin:12px 0 6px 0;
+      font-size:14px;
+      color:#111;
+    }
+
+    p, li{
+      font-size:14px;
+      line-height:1.55;
+      margin:8px 0;
+    }
+
+    ul{
+      margin:8px 0 12px 20px;
+    }
+
+    table{
+      width:100%;
+      border-collapse:collapse;
+      margin:12px 0;
+    }
+
+    th, td{
+      padding:8px 10px;
+      border:1px solid #e1e6ef;
+      text-align:left;
+      vertical-align:top;
+      font-size:13px;
+    }
+
+    th{
+      background:var(--accent);
+      color:white;
+      font-weight:600;
+    }
+
+    .page-legend{
+      text-align:right;
+      font-size:12px;
+      color:#666;
+      margin-top:6px;
+    }
+
+    footer{
+      margin-top:22px;
+      padding-top:12px;
+      border-top:1px solid #e9eef6;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      font-size:13px;
+      color:#666;
+    }
+
+    footer a{
+      color:var(--accent);
+      text-decoration:none;
+      font-weight:600;
+    }
+
+    /* Estilo imprimible: crear saltos de página cada ~ 2 páginas si se imprime */
+    @media print {
+      body{background:white;}
+      .contenedor{box-shadow:none;margin:0;padding:28px;}
+      header h1{font-size:20px;}
+      footer{position:fixed;bottom:0;left:0;right:0;padding:8px 28px;background:#fff;}
+      .page-break {page-break-after: always;}
+    }
+
+    /* Diseño responsivo para móvil */
+    @media (max-width:520px){
+      .contenedor{margin:12px;padding:18px;}
+      header h1{font-size:18px;}
+    }
+  </style>
+</head>
+
+<body>
+  <div class="contenedor">
+    <header>
+      <h1>El Repositorio en GitHub</h1>
+      <div class="meta">
+        Nombre del estudiante:Yatana Elizabeth Almazan &nbsp; | &nbsp;
+        Materia: Fundamentos de Desarrollo Web &nbsp; | &nbsp;
+        Fecha: <span id="fecha">26 de octubre de 2025</span>
+      </div>
+    </header>
+
+    <hr class="sep">
+
+    <!-- 1 -->
+    <section>
+      <h2>1. ¿Qué es un Repositorio en GitHub?</h2>
+      <p>
+        Un <strong>repositorio</strong> (o "repo") en GitHub es un contenedor digital que aloja todos los archivos, documentación y el historial de versiones de un proyecto. 
+        Sirve como la unidad básica de trabajo para proyectos de software: permite almacenar el código fuente, realizar seguimiento de cambios, documentar decisiones y colaborar con otros desarrolladores.
+      </p>
+      <p>
+        GitHub es una plataforma basada en la web que utiliza el sistema de control de versiones <em>Git</em>. A diferencia de un simple almacenamiento en la nube, GitHub mantiene un historial cronológico y detallado de cada cambio, facilitando la trazabilidad, la recuperación de versiones anteriores y el trabajo en equipo.
+      </p>
+    </section>
+
+    <!-- 2 -->
+    <section>
+      <h2>2. Utilidad y Funcionalidad del Repositorio</h2>
+
+      <h3>A. Control de versiones (Version Control)</h3>
+      <p>
+        El control de versiones es la funcionalidad central de Git y GitHub. Entre sus beneficios más importantes se incluyen:
+      </p>
+      <ul>
+        <li><strong>Historial completo:</strong> registro de quién hizo cada cambio, cuándo y por qué.</li>
+        <li><strong>Reversión:</strong> posibilidad de volver a una versión anterior si se introdujo un error.</li>
+        <li><strong>Branching:</strong> creación de ramas para desarrollar nuevas funcionalidades de forma aislada sin afectar la rama principal.</li>
+      </ul>
+
+      <h3>B. Colaboración y flujo de trabajo</h3>
+      <p>
+        GitHub facilita el trabajo en equipo mediante herramientas integradas:
+      </p>
+      <ul>
+        <li><strong>Pull Requests:</strong> permiten proponer cambios para revisión antes de integrarlos al proyecto principal.</li>
+        <li><strong>Issues:</strong> sistema para reportar bugs, solicitar mejoras y organizar tareas.</li>
+        <li><strong>Revisiones de código:</strong> comentarios en líneas específicas del código para mejorar la calidad y detectar errores.</li>
+      </ul>
+
+      <h3>C. Respaldo y accesibilidad</h3>
+      <p>
+        Al alojar repositorios en la nube, GitHub garantiza que el código esté respaldado y accesible desde cualquier dispositivo con conexión a Internet. Esto protege frente a fallas locales y permite colaboración distribuida.
+      </p>
+    </section>
+
+    <div class="page-break"></div>
+
+    <!-- 3 -->
+    <section>
+      <h2>3. Importancia en el Desarrollo Web</h2>
+      <p>
+        GitHub es una herramienta indispensable en el desarrollo web moderno. Permite centralizar el código de proyectos, coordinar equipos y aplicar buenas prácticas de ingeniería de software. 
+        Además, facilita integraciones con sistemas de integración continua (CI/CD), pruebas automatizadas y despliegue automático.
+      </p>
+
+      <h3>A. Estándar de la industria</h3>
+      <p>
+        La mayoría de empresas y proyectos utilizan Git o sistemas compatibles. Dominar GitHub es una habilidad demandada en ofertas laborales relacionadas con desarrollo y mantenimiento de software.
+      </p>
+    </section>
+
+    <!-- 4 -->
+    <section>
+      <h2>4. Portafolio Profesional</h2>
+      <p>
+        Un repositorio de GitHub actúa como un portafolio vivo del desarrollador. Los reclutadores y gerentes de contratación revisan repositorios para evaluar la calidad del código, documentación y experiencia práctica.
+      </p>
+      <p>
+        Buenas prácticas que llaman la atención en un portafolio:
+      </p>
+      <ul>
+        <li>README claro y estructurado con objetivos del proyecto y pasos para ejecutar.</li>
+        <li>Commits descriptivos y regulares.</li>
+        <li>Uso de ramas y Pull Requests para trabajo colaborativo.</li>
+        <li>Pruebas automatizadas e instrucciones de despliegue.</li>
+      </ul>
+    </section>
+
+    <!-- 5 -->
+    <section>
+      <h2>5. Despliegue (Deployment) y Alojamiento</h2>
+      <p>
+        GitHub Pages permite alojar sitios estáticos directamente desde un repositorio, convirtiéndolo en una plataforma gratuita y simple para compartir demos, portafolios o documentación.
+      </p>
+      <p>
+        Para publicar con GitHub Pages basta con agregar un archivo <code>index.html</code> en la rama indicada (por lo general <code>main</code> o <code>gh-pages</code>), y activar Pages desde la configuración del repositorio.
+      </p>
+    </section>
+
+    <!-- 6 -->
+    <section>
+      <h2>6. Buenas Prácticas en GitHub</h2>
+      <ul>
+        <li><strong>README.md completo:</strong> descripción, instalación, uso y licencia.</li>
+        <li><strong>Commits claros:</strong> mensajes que describan el cambio con brevedad y contexto.</li>
+        <li><strong>Uso de ramas:</strong> desarrollar nuevas funciones en ramas y usar Pull Requests para revisión.</li>
+        <li><strong>Etiquetas y Issues:</strong> organizar trabajo con etiquetas claras y asignaciones.</li>
+        <li><strong>Evitar subir credenciales:</strong> nunca guardar claves o contraseñas en el repositorio; usar variables de entorno y servicios secretos.</li>
+      </ul>
+    </section>
+
+    <!-- 7 -->
+    <section>
+      <h2>7. Seguridad y Privacidad</h2>
+      <p>
+        Medidas básicas para proteger un repositorio:
+      </p>
+      <ul>
+        <li><strong>Repositorios privados</strong> para proyectos que contienen material sensible.</li>
+        <li><strong>Protección de ramas</strong> para evitar merges directos sin revisión.</li>
+        <li><strong>Revisión de dependencias</strong> y uso de herramientas de análisis para detectar vulnerabilidades.</li>
+        <li><strong>Control de accesos</strong> mediante equipos y permisos dentro de la organización.</li>
+      </ul>
+    </section>
+
+    <!-- 8 -->
+    <section>
+      <h2>8. Contribución a Proyectos de Código Abierto</h2>
+      <p>
+        GitHub es la plataforma principal para proyectos open source. Contribuir permite:
+      </p>
+      <ul>
+        <li>Mejorar bibliotecas y herramientas usadas por la comunidad.</li>
+        <li>Aprender buenas prácticas mediante revisiones de código.</li>
+        <li>Ganar visibilidad profesional y colaborativa.</li>
+      </ul>
+      <p>
+        Antes de contribuir a un proyecto, es recomendable leer su <code>CONTRIBUTING.md</code> y respetar el código de conducta.
+      </p>
+    </section>
+
+    <!-- Conclusión -->
+    <section>
+      <h2>9. Conclusión</h2>
+      <p>
+        Un repositorio en GitHub es mucho más que un almacenamiento de archivos: es una herramienta de gestión, colaboración y despliegue que forma parte integral del flujo moderno de desarrollo. 
+        Su uso correcto mejora la calidad del software, facilita el trabajo en equipo y potencia la proyección profesional del desarrollador.
+      </p>
+    </section>
+
+    <!-- Anexos y referencias -->
+    <section>
+      <h2>Anexos y Referencias</h2>
+
+      <h3>Referencias</h3>
+      <ul>
+        <li>MDN Web Docs - Git y GitHub. <em>developer.mozilla.org</em>.</li>
+        <li>GitHub Docs - About repositories. <em>docs.github.com</em>.</li>
+        <li>Pro Git book - Scott Chacon & Ben Straub.</li>
+      </ul>
+
+      <h3>Anexo A — Ejemplo básico (README inicial)</h3>
+      <pre style="background:#f5f7fb;border:1px solid #e6ecf6;padding:10px;font-size:13px;overflow:auto;">
+# NombreDelProyecto
+Descripción breve del proyecto.
+
+## Instalación
+1. Clonar el repositorio:
+   git clone https://github.com/usuario/NombreDelProyecto.git
+2. Entrar a la carpeta y seguir instrucciones.
+
+## Uso
+Explica cómo ejecutar o desplegar el proyecto.
+      </pre>
+    </section>
+
+    <footer>
+      <div>2025 © Todos los derechos reservados</div>
+      <div>
+        <a href="mailto:tuemail@ejemplo.com">Contacto</a> &nbsp;|&nbsp;
+        <a href="https://infogpstech.github.io" target="_blank">Volver al sitio</a>
+      </div>
+    </footer>
+
+  </div>
+</body>
+</html>
