@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>infogpstech.github.io</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+
+    .contenedor {
+      background-color: #d1f3f8;
+      padding: 15px;
+      border-radius: 10px;
+      margin-bottom: 15px;
+    }
+
+    .caja {
+      background-color: #b8daff;
+      padding: 10px;
+      border-radius: 10px;
+      margin-bottom: 10px;
+    }
+
+    .resultado {
+      background-color: #f3d8f8;
+      padding: 15px;
+      border-radius: 10px;
+      margin-top: 20px;
+    }
+
+    .resultado hr {
+      margin: 10px 0;
+    }
+
+    b {
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="contenedor" id="contenedor">
+    Este es un párrafo dentro del contenedor.
+  </div>
+
+  <div class="caja" id="caja1">Gato</div>
+  <div class="caja" id="caja2">Perro</div>
+
+  <p id="mensaje">Buenos dias  compañeros </p>
+  <p>Hoy es un día lindo</p>
+
+  <div class="resultado" id="resultado"></div>
+
+  <script>
+    // Datos del alumno
+    const nombre = "Yatana Elizabeth Almazan";
+    const nacimiento = 2007;
+    const actual = 2025;
+    const edad = actual - nacimiento;
+
+    // Obtener valores del HTML
+    const contenedorTexto = document.getElementById("contenedor").textContent;
+    const caja1Texto = document.getElementById("caja1").textContent;
+    const mensajeTexto = document.getElementById("mensaje").textContent;
+
+    // Mostrar resultado final
+    document.getElementById("resultado").innerHTML = `
+      <b>Nombre:</b> ${nombre}<br>
+      <b>Año de nacimiento:</b> ${nacimiento}<br>
+      <b>Año actual:</b> ${actual}<br>
+      <b>Edad:</b> ${edad} años
+      <hr>
+      <b>Contenedor:</b> ${contenedorTexto}<br>
+      <b>Primera caja:</b> ${caja1Texto}<br>
+      <b>Mensaje:</b> ${mensajeTexto}
+    `;
+  </script>
+</body>
+</html>
