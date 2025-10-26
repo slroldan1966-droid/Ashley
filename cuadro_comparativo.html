@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eventos en JavaScript</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f7f7f7;
+      margin: 0;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background-color: white;
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+      margin-top: 20px;
+    }
+
+    th, td {
+      border: 1px solid #ddd;
+      padding: 12px;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    th {
+      background-color: #007bff;
+      color: white;
+      text-transform: capitalize;
+    }
+
+    td code {
+      background-color: #f1f1f1;
+      padding: 5px 8px;
+      border-radius: 5px;
+      display: block;
+      color: #333;
+    }
+
+    tr:hover {
+      background-color: #f9f9f9;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Eventos en JavaScript</h1>
+
+  <table>
+    <tr>
+      <th>Evento</th>
+      <th>Descripción</th>
+      <th>Ejemplo en Código</th>
+    </tr>
+
+    <tr>
+      <td><b>onclick</b></td>
+      <td>Se activa cuando el usuario hace clic en un elemento.</td>
+      <td>
+        <code>&lt;button onclick="alert('¡Hola!')"&gt;Haz clic&lt;/button&gt;</code>
+        <button onclick="alert('¡Hola!')">Haz clic</button>
+      </td>
+    </tr>
+
+    <tr>
+      <td><b>onmouseover</b></td>
+      <td>Se activa cuando el puntero del ratón pasa sobre un elemento.</td>
+      <td>
+        <code>&lt;div onmouseover="this.style.background='yellow'"&gt;Pasa el mouse&lt;/div&gt;</code>
+        <div onmouseover="this.style.background='yellow'" style="padding:5px;">Pasa el mouse</div>
+      </td>
+    </tr>
+
+    <tr>
+      <td><b>onkeydown</b></td>
+      <td>Se activa cuando el usuario presiona una tecla.</td>
+      <td>
+        <code>&lt;input type="text" onkeydown="console.log('Tecla presionada')"&gt;</code>
+        <input type="text" onkeydown="console.log('Tecla presionada')">
+      </td>
+    </tr>
+
+    <tr>
+      <td><b>onchange</b></td>
+      <td>Se activa cuando el valor de un campo cambia.</td>
+      <td>
+        <code>&lt;select onchange="alert('Opción cambiada')"&gt;...&lt;/select&gt;</code>
+        <select onchange="alert('Opción cambiada')">
+          <option>Opción 1</option>
+          <option>Opción 2</option>
+        </select>
+      </td>
+    </tr>
+
+    <tr>
+      <td><b>ondblclick</b></td>
+      <td>Se activa cuando el usuario hace doble clic en un elemento.</td>
+      <td>
+        <code>&lt;p ondblclick="this.style.color='red'"&gt;Haz doble clic aquí&lt;/p&gt;</code>
+        <p ondblclick="this.style.color='red'">Haz doble clic aquí</p>
+      </td>
+    </tr>
+  </table>
+
+</body>
+</html>
